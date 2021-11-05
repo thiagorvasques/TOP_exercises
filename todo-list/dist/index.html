@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://kit.fontawesome.com/328a4ec446.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <title>ToDo</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-secondary bg-gradient">
+        <div class="d-flex">
+            <h3 class="text-light pt-1">ToDo</h3>
+        </div>
+    </nav>
+    <main>
+        <div id="content">
+            <div id="left" style="min-width: 200px;">
+                <div class="d-flex flex-column">
+                    <button type="button" class="item0 btn btn-light text-left" id="inbox">Inbox</button>
+                    <button type="button" class="item1 btn btn-light text-left" id="today">Today</button>
+                    <button type="button" class="item2 btn btn-light text-left" id="upcoming">Upcoming</button>
+                </div>
+                <div class="dropdown d-flex flex-row divMenu w-100">
+                    <button class="btn btn-light dropdown-toggle text-left w-100" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-expanded="false">Projects</button>
+                    <button class="btn btn-light" data-toggle="modal" data-target="#projectModal"
+                        id="newProject">+</button>
+                    <div class="dropdown-menu bg-light drop w-100" x-placement="bottom-start" id="drop"
+                        style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
+                        <!--dropdown items-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-10 d-flex flex-column w-75" id="right">
+
+                <table id="taskTable" class="d-flex flex-column w-75 m-4">
+                    <thead>
+                        <th id="th" class="w-75">Inbox</th>
+                        <th class="pl-5">Due Date</th>
+                    </thead>
+                    <tbody class=" table table-striped d-flex flex-column" id="tableBody">
+
+                    </tbody>
+                    <tfoot>
+                        <tr class="w-100" id="addTask">
+                            <td class="w-auto d-flex">
+                                <button id="addBtn" class="btn btn-light m-1" type="button" data-toggle="collapse" data-target="#collapseForm" autocomplete="false">Add Task</button>
+                                <button id="deleteproject" class="btn btn-light m-1 d-none" type="button">Delete Project</button>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <!--Collapse form add task-->
+                <div class="collapse w-75" id="collapseForm">
+                    <form id="taskForm" autocomplete="off">
+                        <div class="d-flex flex-row">
+                            <label for="inputText"></label>
+                            <input class="form.control w-75 m-1" name="inputText" autocomplete="off">
+                            <input class="m-1" type="date" name="" id="taskDate">
+                        </div>
+                        <button class="btn btn-light w-25 mt-2" type="submit">Submit</button>
+                    </form>
+
+                </div>
+
+
+
+            </div>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="projectModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="projectModal">New Project</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form id="projectForm">
+                        <div class="modal-body">
+                            <div class="form-group d-flex flex-column">
+                                <input class="form-control form-control-lg m-1" type="text" name="projectName"
+                                    id="projectName" placeholder="Title">
+                                <div class="d-flex flex-row">
+                                    <input class="form-control form-control-lg m-1 w-100" type="text" name="projectTask" id="projectTask" placeholder="Task">
+                                    <input class="form-control form-control-lg m-1" type="date" name="projectTask" id="projectDate">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+                            <button type="button" class="btn btn-secondary" id="save"
+                                data-dismiss="modal">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

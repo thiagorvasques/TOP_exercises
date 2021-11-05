@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <title>Rock Paper Scissors</title>
+    <meta charset="UTF-8"/>
+</head>
+  <body>
+    <div class="container">
+      <h1>Rock, Paper, Scissors</h1>
+    </div>
+    <div class="container">
+      <div id="score-box">
+        <div class="playerScore">0</div>
+        <div>X</div>
+        <div class="computerScore">0</div>
+      </div>
+    </div> 
+    <div class="container">
+      <div class=" player-computer">
+        <h1>Player</h1>
+        <h1>Computer</h1>
+      </div>
+    </div>
+    <div class="container">
+      <div class="round">
+        <h1>Round:</h1>
+        <h1 class="count">0</h1>
+        <h1>/ 5</h1>
+      </div>
+    </div>
+    <div class="container">
+      <div class="result">
+        <div class="players" id="player">
+          <img id="playerImage" src="./images/shade.svg" alt="playerchoice">
+        </div>
+      </div>
+      <div class="result">
+        <div class="players" id="computer">
+          <img id ="computerImage" src="./images/shade.svg" alt="computerchoice">
+        </div>
+      </div>
+    </div>
+    <div id="container">
+      <div class="textBox">
+        <h1 id="winnerText"></h1>
+      </div>      
+    </div>
+    <div class="container">
+      <div class="play-box">
+        <div class="button-box">
+          <button class="option" onclick="playRound()"  id="rock"  value="0" type="button"><img src="./images/rock.svg" alt="rock"></button>
+        </div>
+        <div class="button-box">
+          <button class="option" onclick="playRound()"  id="paper" value="1" type="button"><img src="./images/paper.svg" alt="paper"></button>
+        </div>
+        <div class="button-box">
+          <button class="option" onclick="playRound()" id="scissors" value="2" type="button"><img src="./images/scissors.svg" alt="scissors"></button>
+        </div>
+        <p></p>
+      </div>
+    </div>   
+<footer >
+  <a class="link" href="https://pt.vecteezy.com/vetor-gratis/%C3%ADcone">ícone Vetores por Vecteezy</a>
+</footer>
+<script src="script.js"></script>
+</body>
+
+</html>

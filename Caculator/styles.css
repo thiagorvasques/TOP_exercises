@@ -1,0 +1,143 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+html{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    font-family: 'Chakra Petch', sans-serif;
+    
+}
+body{
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(#404c44, #c7dec6);
+    background-repeat: no-repeat;
+    height: 100%;
+}
+.calculatorBody{
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    width: 300px;
+    min-width: 300px;
+    height: 465px;
+    min-height 465px;
+    margin-top: 150px;    
+    border-radius: 45% 42% 50% 50% / 4% 4% 10% 10%; 
+    padding: 10px 10px;
+    background-image: radial-gradient(ellipse at center left, #7b7a7a 10%, #4e4747 50% );
+    box-shadow: inset -5px -20px 5px #3e3e3e,  8px 4px 5px 11px #292929;
+    
+    
+
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 25px;
+    align-items: center;
+    color: white;
+    /*background-color: greenyellow;*/
+}
+
+}
+.headerText{
+    background-color: green;
+}
+
+    
+.sunBox{    
+    width: 120px;
+    height: 35px;
+    background-color: #442a2a;
+    border-radius: 5px;
+    font-size: 60px;
+    box-shadow: inset -1px 0px 0px #e8e8e8, inset 3px -1px 5px 2px #292929;
+
+    
+}
+.resultBox{
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: flex-end;
+    width: 280px;
+    margin: 10px 0px;
+    height: 70px;
+    background-color: #758472;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    box-shadow: inset -1px 0px 0px #e8e8e8, inset 3px -1px 5px 2px #292929;
+}
+.bodyBox{
+    width: inherit;
+    display: flex;
+    
+}
+.col-1{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 4;
+    /*background-color: blue;*/
+    justify-content: center;
+    align-items: center;
+   
+}
+.col-2{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /*background-color: lemonchiffon;*/
+    justify-content: center;
+    align-items: flex-start;
+}
+button{
+    padding: 0;
+    border: none;
+    background: none;
+    width: 55px;
+    height: 45px;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 5px;
+    background-color: #4e4747;
+    color: white;
+    border-radius: 10px;
+    box-shadow: inset 1px -1px 0px 0px #ffffff, 3px -1px 2px 2px #292929;
+}
+#plus1{
+    height: 5.2em;
+}
+button, button:focus{
+    outline: none;
+    background: transparent;
+    border: none;
+  }
+button:active{
+    outline: none;
+    background: transparent;
+    border: 1px solid grey;
+  }

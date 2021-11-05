@@ -1,0 +1,79 @@
+.fullPage {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(241, 241, 241, 1) 0%,
+    rgba(242, 242, 242, 1) 2%,
+    rgba(243, 243, 243, 1) 5%,
+    rgba(244, 244, 244, 1) 7%,
+    rgba(245, 245, 245, 1) 10%,
+    rgba(247, 247, 247, 1) 14%,
+    rgba(248, 248, 248, 1) 17%,
+    rgba(249, 249, 249, 1) 21%,
+    rgba(251, 251, 251, 1) 25%,
+    rgba(252, 252, 252, 1) 29%,
+    rgba(253, 253, 253, 1) 34%,
+    rgba(254, 254, 254, 1) 38%,
+    rgba(254, 254, 254, 1) 43%,
+    rgba(255, 255, 255, 1) 51%
+  );
+}
+header {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.memo {
+  font: bold arial, sans-serif;
+  background-color: #979797;
+  color: transparent;
+  text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.5);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+}
+.scores {
+  display: flex;
+  flex-direction: row;
+  width: 30%;
+  justify-content: space-evenly;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.table {
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin-top: 3%;
+  min-width: 1000px;
+}
+.photoBox {
+  display: grid;
+  justify-self: center;
+  width: 200px;
+  height: 150px;
+}
+.photoBox > img {
+  align-self: center;
+  object-fit: cover;
+  width: 100%;
+  max-height: 120px;
+  border-radius: 1em;
+  box-shadow: 0px 0px 7px 2px #888888;
+}

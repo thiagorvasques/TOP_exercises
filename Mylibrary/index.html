@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Library</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="d-flex flex-column load">
+    <header class=".container-fluid bg flex-shrink-1 header-box">
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="name">
+          <h1>My Library</h1>
+        </div>
+        <div
+          class="d-flex justify-content-center align-items-bottom menu"
+          onclick="showDiv()"
+        >
+          <div class="show-info align-self-end">
+            <i class="arrow down"></i>
+          </div>
+        </div>
+        <div class="signin">
+          <button type="button" class="btn btn-info" id="signin">
+            Sign in
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="flex-grow-1 main">
+      <div
+        class="
+          information
+          d-flex
+          justify-content-around
+          align-items-center
+          d-none
+        "
+      >
+        <h6 class="totalBooks pt-2"></h6>
+        <h6 class="completedBooks pt-2"></h6>
+        <h6 class="pages pt-2"></h6>
+        <button
+          class="btn btn-info align-self-center"
+          id="addBook"
+          type="button"
+        >
+          <span>New book</span>
+        </button>
+      </div>
+      <div class="container-fluid wrapper">
+        <div class="d-flex justify-content-xl-start p-5 flex-wrap cards-box">
+          <!--Books cards goes here-->
+        </div>
+      </div>
+      <!-- modal-->
+      <div id="inputModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content d-flex justify-content-between">
+          <div class="d-flex align-self-center">
+            <h3>Add new book</h3>
+          </div>
+          <div>
+            <form class="bookForm">
+              <input
+                class="title"
+                type="text"
+                autofocus
+                autocomplete="off"
+                placeholder=" Title"
+              />
+              <hr />
+              <input
+                class="author"
+                type="text"
+                autocomplete="off"
+                placeholder="Author"
+              />
+              <hr />
+              <input
+                class="totalPages"
+                type="text"
+                autocomplete="off"
+                placeholder="Total pages"
+              />
+              <div class="d-flex flex-column justify-content-center">
+                <p class="d-flex align-self-center">Read</p>
+                <label class="switch align-self-center">
+                  <input type="checkbox" class="read" />
+                  <span class="slider round"></span>
+                </label>
+              </div>
+              <div
+                class="d-flex justify-content-around align-items-center mt-3"
+              >
+                <button
+                  type="button"
+                  id="cancel"
+                  class="close btn btn-info modal-button"
+                >
+                  Cancel
+                </button>
+                <button type="submit" class="add btn btn-info modal-button">
+                  Add
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="navbar navbar-fixed-bottom flex-shrink-1">
+      <a href="https://github.com/thiagorvasques/Mylibrary"
+        >By Thiago R. Vasques</a
+      >
+    </footer>
+    <script src="./script.js"></script>
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+   <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-firestore.js"></script>
+
+     <script>
+    // TODO: Replace the following with your app's Firebase project configuration
+    // For Firebase JavaScript SDK v7.20.0 and later, `measurementId` is an optional field
+    var firebaseConfig = {
+        apiKey: "AIzaSyBycSXGkxwEGvKx5SBJlbfIZqEwOHmuGQ8",
+        authDomain: "my-library-82676.firebaseapp.com",
+        projectId: "my-library-82676",
+        storageBucket: "my-library-82676.appspot.com",
+        messagingSenderId: "714068819065",
+        appId: "1:714068819065:web:17a900c52b7e6382ea68a8",
+      };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+</body>
+  </body>
+</html>

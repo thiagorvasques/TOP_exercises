@@ -1,0 +1,19 @@
+
+  <%- include('head') %>
+  <body>
+    <%- include('nav') %>
+    <div class="container-sm bg-light">
+      <% messages.forEach(message => { %>
+      <div class="jumbotron">
+        <h6><%= message.user%>:</h6>
+        <p>- <%= message.text %></p>
+        <p><%= message.added.toLocaleString()%></p>
+        <hr />
+      </div>
+      <% }); %>
+    </div>
+    <div class="container-sm">
+      <a href="/new" class="btn btn-primary">New message</a>
+    </div>
+  </body>
+</html>
